@@ -9,7 +9,7 @@ function Signup() {
     localStorage.setItem("token", "dummy123");
 
     // 🔥 dashboard open (different app)
-    window.location.href = "http://localhost:3000";
+    window.location.href = "http://localhost:3001";
   };
 
   return ( 
