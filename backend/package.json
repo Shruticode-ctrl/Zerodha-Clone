@@ -1,18 +1,22 @@
 {
+
+   "scripts": {
+    "start": "node index.js"
+  },
+  
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
   "main": "index.js",
-  "scripts": {
-  "start": "nodemon index.js",
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
-  "devDependencies": {
-    "nodemon": "^3.1.14"
+  "type": "commonjs",
+  "license": "ISC",
+
+ 
+
+  "engines": {
+    "node": ">=18"
   },
+
   "dependencies": {
     "body-parser": "^2.2.2",
     "cors": "^2.8.6",
@@ -22,5 +26,9 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^9.0.1"
+  },
+
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
