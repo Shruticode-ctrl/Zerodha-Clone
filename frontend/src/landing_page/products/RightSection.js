@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function RightSection({
   imageURL,
@@ -8,20 +9,24 @@ function RightSection({
 }) {
   return (
     <div className="container mt-5">
-      <div className="row ">
+      <div className="row">
+
         <div className="col-6 p-5 mt-5">
           <h1>{productName}</h1>
           <p>{productDescription}</p>
 
           <div>
-            <a href={learnMore}>
-              Learn More<i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </a>
+            <Link to={learnMore}>
+              Learn More{" "}
+              <i className="fa fa-arrow-right" aria-hidden="true"></i>
+            </Link>
           </div>
         </div>
-        <div className="col-6 ">
-          <img src={imageURL} />
+
+        <div className="col-6">
+          <img src={imageURL} alt={productName} />
         </div>
+
       </div>
     </div>
   );

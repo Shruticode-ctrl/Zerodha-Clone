@@ -1,72 +1,75 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
-    return ( 
-        <footer style={{backgroundColor:"rgb(250,250,250)"}}>
-       <div className="container border-top mt-5">
-        <div className="row mt-5 ">
-            <div className="col">
-                <img src="media/logo.svg" alt="logo" style={{width:"50%"}}/>
-           <p>&copy; 2010 - 2026, Zerodha Broking Ltd.All rights reserved.</p>
-            </div>
+  return (
+    <footer style={{ backgroundColor: "rgb(250,250,250)" }}>
+      <div className="container border-top mt-5">
+        <div className="row mt-5">
 
-            <div className="col">
-                <p><b>Account</b> </p>
-           <a href="/" style={{ textDecoration: "none" }}>Open demat account</a><br/> 
-           <a href="/" style={{ textDecoration: "none" }}>Minor demat account</a><br/> 
-           <a href="/" style={{ textDecoration: "none" }}>NRI demat account</a><br/>
-           <a href="/" style={{ textDecoration: "none" }}>HUF demat account</a><br/>  
-           <a href="/" style={{ textDecoration: "none" }}>Commodity</a><br/>
-           <a href="/" style={{ textDecoration: "none" }}>Dematerialisation</a><br/>
-           <a href="/" style={{ textDecoration: "none" }}>Fund transfer</a><br/>
-           <a href="/" style={{ textDecoration: "none" }}>MTF</a><br/>
-            </div>
+          <div className="col">
+            <img src="media/logo.svg" alt="logo" style={{ width: "50%" }} />
+            <p>
+              &copy; 2010 - 2026, Zerodha Broking Ltd. All rights reserved.
+            </p>
+          </div>
 
-            <div className="col">
-                 <p><b>Support</b></p>
-           <a href="/" style={{ textDecoration: "none" }}>Contact us</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Support portal</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>How to file a complaint?</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Status of your complaints</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Bulletin</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Circular</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Z-Connect blog</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Downloads</a>
-            </div>
+          {/* Account */}
+          <div className="col">
+            <p><b>Account</b></p>
+            <Link to="/" style={{ textDecoration: "none" }}>Open demat account</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Minor demat account</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>NRI demat account</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>HUF demat account</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Commodity</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Dematerialisation</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Fund transfer</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>MTF</Link><br />
+          </div>
 
-            <div className="col">
-                 <p><b>Company</b></p>
-           <a href="/" style={{ textDecoration: "none" }}>About</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Philosophy</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Press & media</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Careers</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Zerodha Cares (CSR)</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Zerodha.tech</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Open source</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Referral program</a>
-            </div>
+          {/* Support */}
+          <div className="col">
+            <p><b>Support</b></p>
+            <Link to="/support" style={{ textDecoration: "none" }}>Contact us</Link><br />
+            <Link to="/support" style={{ textDecoration: "none" }}>Support portal</Link><br />
+            <Link to="/support" style={{ textDecoration: "none" }}>How to file a complaint?</Link><br />
+            <Link to="/support" style={{ textDecoration: "none" }}>Status of complaints</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Bulletin</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Circular</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Z-Connect blog</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Downloads</Link>
+          </div>
 
-            <div className="col">
-                 <p><b>Quick links</b></p>
-           <a href="/" style={{ textDecoration: "none" }}>Upcoming IPOs</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Brokerage charges</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Market holidays</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Economic calendar</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Calculators</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Markets</a><br /> 
-           <a href="/" style={{ textDecoration: "none" }}>Sectors</a><br />
-           <a href="/" style={{ textDecoration: "none" }}>Gift Nifty</a>
-            </div>
+          {/* Company */}
+          <div className="col">
+            <p><b>Company</b></p>
+            <Link to="/" style={{ textDecoration: "none" }}>About</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Philosophy</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Press & media</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Careers</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>CSR</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Zerodha.tech</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Open source</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Referral program</Link>
+          </div>
+
+          {/* Quick links */}
+          <div className="col">
+            <p><b>Quick links</b></p>
+            <Link to="/" style={{ textDecoration: "none" }}>Upcoming IPOs</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Brokerage charges</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Market holidays</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Economic calendar</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Calculators</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Markets</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Sectors</Link><br />
+            <Link to="/" style={{ textDecoration: "none" }}>Gift Nifty</Link>
+          </div>
 
         </div>
-
-        <div className="mt-5 text-muted" style={{fontSize:"14px"}}>
-            {/* niche wala content same rehne do */}
-        </div>
-
-  </div>
-  </footer>
-     );
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;
