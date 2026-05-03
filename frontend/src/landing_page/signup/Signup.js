@@ -13,7 +13,7 @@ function Signup() {
     localStorage.setItem("token", "dummy123");
 
     // dashboard redirect
-    window.location.href = "http://localhost:3001";
+    window.location.href = "https://zerodha-clone-3ym2.vercel.app/";
   };
 
   return (
