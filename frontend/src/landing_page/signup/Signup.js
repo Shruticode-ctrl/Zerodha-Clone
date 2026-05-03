@@ -4,16 +4,19 @@ function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignup = () => {
+  const handleSignup = (e) => {
+    if (e) e.preventDefault(); // important safety fix
+
     if (!username || !password) {
       alert("Please fill all fields");
       return;
     }
 
+    // store dummy login token
     localStorage.setItem("token", "dummy123");
 
-    // dashboard redirect
-    window.location.href = "https://zerodha-clone-3ym2.vercel.app/";
+    // redirect to dashboard (safe method)
+    window.location.replace("https://zerodha-clone-3ym2.vercel.app/");
   };
 
   return (
@@ -36,7 +39,9 @@ function Signup() {
       />
       <br /><br />
 
-      <button onClick={handleSignup}>Create Account</button>
+      <button onClick={(e) => handleSignup(e)}>
+        Create Account
+      </button>
     </div>
   );
 }
